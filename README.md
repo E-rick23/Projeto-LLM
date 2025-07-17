@@ -1,13 +1,10 @@
-# DashBrother
+# REQUIEM
 
-## Sobre o Dashbrother
+## Sobre o Requiem
 
-O Dashbrother é uma página web que exibe dados sobre a temperatura e umidade da região, além de exibir o horário atual (baseado na hora do seu computador)
+O Requiem é uma página web que possui utiliza uma LLM para auxiliar no processo de geração de um documento de requisitos, atualmente, focado na análise de requisitos.
 
 
 
 ### Como utilizar?
-
-Simplesmente abra o arquivo Pagina_Principal.html e permita o acesso a sua localização para os dados de temperatura. :D
-
-Você também pode adicionar seu nome na saudação, ao abrir configurações e clicar na opção de "Inserir Nome"
+A ser preenchido
