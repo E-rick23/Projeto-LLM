@@ -42,23 +42,21 @@
             </div>
         </div>
         <div class="sections">
-            <div class="section" onmouseover="exibirGrafico('graficoTemperaturaContainer')" onmouseout="ocultarGrafico('graficoTemperaturaContainer')">
-                <div class="icon">🌞</div>
-                <h2>Temperatura</h2>
-                <p id="temperatura">Temperatura atual do ambiente:</p>
-                <div class="grafico-container" id="graficoTemperaturaContainer">
-                    <canvas id="graficoTemperatura" width="400" height="200"></canvas>
+            <div class="llm-helper-container">
+                <div class="llm-input">
+                    <h2>Entrada de Requisitos</h2>
+                    <textarea id="entrada-requisitos" placeholder="Cole seus requisitos aqui..."></textarea>
+                    <button class="llm-button" onclick="enviarParaLLM()">Analisar Requisitos</button>
                 </div>
+            <div class="llm-output">
+                <h2>Resultado da Análise</h2>
+                <pre id="resposta-llm"></pre>
             </div>
-            <div class="section" onmouseover="exibirGrafico('graficoUmidadeContainer')" onmouseout="ocultarGrafico('graficoUmidadeContainer')">
-                <div class="icon">💧</div>
-                <h2>Umidade</h2>
-                <p id="umidade">Umidade atual do ambiente:</p>
-                <div class="grafico-container" id="graficoUmidadeContainer">
-                    <canvas id="graficoUmidade" width="400" height="200"></canvas>
-                </div>
             </div>
         </div>
+
+
+
         <div class="sections">
             <div class="quick-links">
                 <h2>Links Rápidos</h2>
@@ -81,12 +79,9 @@
             <button id="close-settings">Fechar</button>
         </div>
     </div>
-    <script src="js/darkmode.js"></script>
-    <script src="js/atualizar_Valores.js"></script>
+    <script src="js/atualizar_Valores.js"></script> 
     <script src="js/saudacao.js"></script>
     <script src="js/configuracao.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/graficos.js"></script>
-    <script src="js/temperatura.js"></script>
-
+    <script src="js/darkmode.js"></script>
+    <script src="js/llm.js"></script>
 </html>

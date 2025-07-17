@@ -66,6 +66,88 @@ main {
     background-color: #fff; /* Muda o fundo para branco */
     color: #000000; /* Muda o texto para a cor original do fundo */
 }
+/*área da llm*/
+.llm-helper-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    max-width: 90vw; /* 90% da largura da viewport */
+    margin: 20px auto;
+    padding: 20px;
+    flex-wrap: wrap; /* Responsivo para telas menores */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+}
+
+.llm-input, .llm-output {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    max-width: 800px;
+}
+
+.llm-input h2,
+.llm-output h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #222;
+}
+
+.llm-input textarea {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    resize: vertical;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.llm-output pre {
+    height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Consolas, monospace;
+    color: #000;
+}
+
+.llm-button {
+    width: fit-content;
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4C5FD5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.llm-button:hover {
+    background-color: #3a4bb3;
+}
+#resposta-llm.typing::after {
+    content: '|';
+    animation: blink 1s infinite;
+    margin-left: 4px;
+}
+
+@keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 
 main {
     text-align: center;
@@ -168,6 +250,29 @@ body.dark-mode .section p {
 body.dark-mode .search-container {
    background-color: rgba(4, 41, 58, 0.7);
 }
+/* área da llm*/
+body.dark-mode .llm-helper-container {
+    background-color: rgba(4, 41, 58, 0.7);
+}
+
+body.dark-mode .llm-input h2,
+body.dark-mode .llm-output h2 {
+    color: #fff;
+}
+
+body.dark-mode .llm-input textarea {
+    background-color: #222;
+    color: #eee;
+    border: 2px solid #555;
+}
+
+body.dark-mode .llm-output pre {
+    background-color: #111;
+    color: #ddd;
+    border: 1px solid #444;
+}
+
+
 
 .search-container {
     width: 520px;
@@ -218,9 +323,6 @@ body.dark-mode .search-container {
     align-items: flex-start; /* Garante que os itens não se ajustem mutuamente */
 }
 
-#graficoUmidadeContainer {
-    padding: 16px;
-}
 
 .section {
     width: 250px;
@@ -335,20 +437,6 @@ body.dark-mode .display {
     font-size: 20px;
     margin-bottom: 1px;
     margin: auto;
-}
-
-.grafico-container {
-    visibility: hidden;
-    opacity: 0; /* Torna invisível */
-    height: 0; /* Define altura zero */
-    overflow: hidden; /* Esconde o conteúdo excedente */
-    transition: visibility 0.3s ease, opacity 0.3s ease, height 0.3s ease;
-}
-
-.grafico-container.mostrar {
-    visibility: visible;
-    opacity: 1;
-    height: auto; /* Define uma altura fixa para evitar recalculo de layout */
 }
 
 .divider {

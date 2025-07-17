@@ -1,19 +1,4 @@
 
-function atualizarTemperatura(valor) {
-    const temperaturaElemento = document.getElementById("temperatura");
-    temperaturaElemento.textContent = `Temperatura atual do ambiente: ${valor}°C`; //nao precisa de aspas
-}
-
-function atualizarUmidade(valor) {
-    const umidadeElemento = document.getElementById("umidade");
-    umidadeElemento.textContent = `Umidade atual do ambiente: ${valor}%`; //nao precisa de aspas
-}
-
-function atualizarLED(valor) {
-    const LEDElemento = document.getElementById("led");
-    LEDElemento.textContent = `Estado do LED: ${valor}`; // usar valor entre aspas tipo atualizarLED("ligado")
-}
-
 function atualizarTempoData() {
     const tempoElemento = document.getElementById("time");
     const dataElemento = document.getElementById("date");
