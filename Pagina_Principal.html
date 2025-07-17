@@ -45,12 +45,13 @@
             <div class="llm-helper-container">
                 <div class="llm-input">
                     <h2>Entrada de Requisitos</h2>
-                    <textarea id="entrada-requisitos" placeholder="Cole seus requisitos aqui..."></textarea>
-                    <button class="llm-button" onclick="enviarParaLLM()">Analisar Requisitos</button>
+                    <textarea id="entrada-requisitos" placeholder="Cole seus requisitos aqui para validação..."></textarea>
+                    <button class="btn-acao" onclick="enviarParaLLM()">Analisar Requisitos</button>
                 </div>
             <div class="llm-output">
-                <h2>Resultado da Análise</h2>
-                <pre id="resposta-llm"></pre>
+                <h2 id="titulo-resposta">Por favor, escolha um modo de operação!</h2>
+                <div id="resposta-llm"></div>
+                <button id="btn-parar" class="btn-acao">Parar</button>
             </div>
             </div>
         </div>
@@ -59,7 +60,7 @@
 
         <div class="sections">
             <div class="quick-links">
-                <h2>Modo de funcionamento</h2>
+                <h2>Modo de operação</h2>
                     <div class="botoes-analise">
                         <button id="btn-validar" class="btn-acao">Validar Requisitos</button>
                         <button id="btn-priorizar" class="btn-acao">Priorizar Requisitos</button>
@@ -82,4 +83,5 @@
     <script src="js/configuracao.js"></script>
     <script src="js/darkmode.js"></script>
     <script src="js/llm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </html>

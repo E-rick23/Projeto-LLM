@@ -67,6 +67,29 @@ main {
     color: #000000; /* Muda o texto para a cor original do fundo */
 }
 /*área da llm*/
+.botoes-analise {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-acao {
+  margin-top: 10px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-acao:hover {
+  background-color: #155ab6;
+}
+
 .llm-helper-container {
     display: flex;
     flex-direction: row;
@@ -103,21 +126,20 @@ main {
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     resize: vertical;
-    margin-bottom: 15px;
     background-color: rgba(255, 255, 255, 0.9);
     color: #000;
 }
 
-.llm-output pre {
-    height: 300px;
-    overflow-y: auto;
-    white-space: pre-wrap;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: Consolas, monospace;
-    color: #000;
+.llm-output div {
+  height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: Consolas, monospace;
+  color: #000;
 }
 
 .llm-button {
@@ -141,6 +163,28 @@ main {
     animation: blink 1s infinite;
     margin-left: 4px;
 }
+
+/*output de texto da llm*/
+.llm-output div strong {
+  font-weight: bold;
+}
+
+.llm-output div em {
+  font-style: italic;
+}
+
+.llm-output div ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.llm-output div code {
+  background: #eee;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
 
 @keyframes blink {
     0%   { opacity: 1; }
@@ -266,7 +310,7 @@ body.dark-mode .llm-input textarea {
     border: 2px solid #555;
 }
 
-body.dark-mode .llm-output pre {
+body.dark-mode .llm-output div {
     background-color: #111;
     color: #ddd;
     border: 1px solid #444;
